@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>게시대닷컴 모바일명함 - 이주원 대표</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Noto Sans KR", system-ui, sans-serif;
+      background: #0b1c37;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      padding: 16px;
+    }
+    .card {
+      width: 100%;
+      max-width: 420px;
+      background: #061020;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.4);
+    }
+    .card img {
+      width: 100%;
+      display: block;
+    }
+    .content {
+      padding: 18px 18px 10px;
+    }
+    .company {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: #4fc3ff;
+    }
+    .name-row {
+      font-size: 17px;
+      margin-bottom: 10px;
+    }
+    .name-row strong {
+      font-size: 20px;
+      font-weight: 700;
+      margin-right: 4px;
+    }
+    .sub {
+      font-size: 13px;
+      opacity: 0.9;
+      margin-bottom: 14px;
+      line-height: 1.4;
+    }
+    .btn-wrap {
+      padding: 0 16px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      text-decoration: none;
+      color: #fff;
+      padding: 12px 10px;
+      border-radius: 999px;
+      font-size: 15px;
+      font-weight: 600;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: linear-gradient(135deg, #0084ff, #00c2ff);
+      box-shadow: 0 10px 20px rgba(0, 150, 255, 0.45);
+    }
+    .btn.secondary {
+      background: #0d223f;
+      box-shadow: none;
+    }
+    .btn span {
+      opacity: 0.9;
+    }
+    .footer {
+      text-align: center;
+      font-size: 11px;
+      color: rgba(255,255,255,0.6);
+      padding-bottom: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+
+    <!-- 같은 폴더에 있는 card.jpg 사용 -->
+    <img src="card.jpg" alt="게시대닷컴 모바일 명함 이미지" />
+
+    <div class="content">
+      <div class="company">게시대닷컴</div>
+      <div class="name-row">
+        <strong>이주원</strong> 대표
+      </div>
+      <p class="sub">
+        합법 지정게시대 전문 &nbsp;|&nbsp; 현수막 제작·게시 원스톱 서비스
+      </p>
+      <p class="sub">
+        주소 : 국세청로 4, 413-2호<br />
+        홈페이지 : http://gesidae.com
+      </p>
+    </div>
+
+    <div class="btn-wrap">
+      <a class="btn" href="tel:01092885003">
+        📞 전화하기  <span>(010-9288-5003)</span>
+      </a>
+      <a class="btn secondary" href="sms:01092885003">
+        💬 문자 보내기
+      </a>
+      <a class="btn secondary" href="mailto:gesidae5003@naver.com">
+        ✉️ 이메일 보내기
+      </a>
+      <a class="btn secondary" href="http://gesidae.com" target="_blank">
+        🌐 홈페이지 열기
+      </a>
+      <a class="btn secondary"
+         href="https://map.naver.com/v5/search/국세청로 4 413-2호"
+         target="_blank">
+        📍 위치 확인(네이버 지도)
+      </a>
+    </div>
+
+    <div class="footer">
+      © 게시대닷컴 · Mobile Business Card
+    </div>
+  </div>
+</body>
+</html>
