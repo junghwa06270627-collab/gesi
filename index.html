@@ -99,6 +99,195 @@
     }
     .tag {
       border-radius: 999px;
-      border: 1px solid rgba
+      border: 1px solid rgba(111, 211, 255, 0.55);
+      font-size: 11px;
+      padding: 4px 10px;
+      background: linear-gradient(135deg, rgba(23, 111, 255, 0.28), rgba(11, 195, 255, 0.12));
+    }
+    .desc {
+      font-size: 12px;
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.78);
+      margin-bottom: 10px;
+    }
+    .desc strong {
+      color: #ffffff;
+    }
+
+    /* 정보 텍스트 */
+    .info-list {
+      margin-top: 8px;
+      margin-bottom: 8px;
+      font-size: 12px;
+      color: rgba(230, 242, 255, 0.9);
+    }
+    .info-item {
+      display: flex;
+      gap: 6px;
+      margin-top: 4px;
+      align-items: flex-start;
+    }
+    .info-label {
+      min-width: 46px;
+      color: rgba(150, 178, 210, 0.95);
+    }
+    .info-text {
+      flex: 1;
+      word-break: keep-all;
+    }
+
+    /* 버튼 영역 */
+    .btn-wrap {
+      padding: 12px 14px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+    .btn {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      text-decoration: none;
+      padding: 11px 12px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+      border: 1px solid transparent;
+      transition: transform 0.12s ease-out, box-shadow 0.12s ease-out, background 0.12s ease-out, border-color 0.12s ease-out;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #0f9bff, #35e0ff);
+      color: #060b16;
+      box-shadow: 0 14px 25px rgba(5, 163, 255, 0.45);
+    }
+    .btn-secondary {
+      background: rgba(9, 25, 55, 0.96);
+      color: #e1f1ff;
+      border-color: rgba(90, 130, 190, 0.6);
+    }
+    .btn span.sub {
+      font-size: 11px;
+      opacity: 0.85;
+      font-weight: 500;
+    }
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 12px 22px rgba(0, 0, 0, 0.6);
+    }
+    .btn:active {
+      transform: translateY(0);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.7);
+    }
+
+    .btn-icon {
+      font-size: 16px;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 11px;
+      color: rgba(180, 205, 235, 0.7);
+      padding: 0 12px 12px;
+    }
+    .footer strong {
+      color: #6fd3ff;
+    }
+
+    @media (max-width: 360px) {
+      .content { padding: 16px 14px 4px; }
+      .btn-wrap { padding: 10px 12px 14px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <!-- 상단 명함 이미지 -->
+      <div class="hero">
+        <!-- ⚠️ 이미지 파일명이 다르면 여기 이름을 실제 파일명으로 바꿔주세요 -->
+        <img src="card.jpg" alt="게시대닷컴 모바일 명함 이미지" />
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          <span>합법 지정게시대 · 프리미엄 현수막</span>
+        </div>
+      </div>
+
+      <!-- 텍스트/정보 영역 -->
+      <div class="content">
+        <div class="company">GESIDAE.COM</div>
+        <div class="title-ko">게시대닷컴</div>
+        <div class="name-row">
+          <strong>이주원</strong> 대표
+        </div>
+
+        <div class="tag-row">
+          <span class="tag">지자체 허가 합법 지정게시대</span>
+          <span class="tag">현수막 제작 · 게시 원스톱</span>
+          <span class="tag">전국 접수 상담 가능</span>
+        </div>
+
+        <p class="desc">
+          <strong>합법 + 신뢰 + 효율</strong>을 기준으로,
+          대표님의 소중한 사업을 깨끗하고 오래 노출되는 옥외광고로 돕고 있습니다.
+        </p>
+
+        <div class="info-list">
+          <div class="info-item">
+            <div class="info-label">주소</div>
+            <div class="info-text">국세청로 4, 413-2호</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">홈페이지</div>
+            <div class="info-text">http://gesidae.com</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">이메일</div>
+            <div class="info-text">gesidae5003@naver.com</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 액션 버튼 -->
+      <div class="btn-wrap">
+        <a class="btn btn-primary" href="tel:01092885003">
+          <span class="btn-icon">📞</span>
+          <span>전화 상담하기</span>
+          <span class="sub">010-9288-5003</span>
+        </a>
+
+        <a class="btn btn-secondary" href="sms:01092885003">
+          <span class="btn-icon">💬</span>
+          <span>문자로 문의 남기기</span>
+        </a>
+
+        <a class="btn btn-secondary" href="mailto:gesidae5003@naver.com">
+          <span class="btn-icon">✉️</span>
+          <span>이메일 보내기</span>
+        </a>
+
+        <a class="btn btn-secondary" href="http://gesidae.com" target="_blank">
+          <span class="btn-icon">🌐</span>
+          <span>홈페이지 열기</span>
+        </a>
+
+        <a class="btn btn-secondary"
+           href="https://map.naver.com/v5/search/국세청로 4 413-2호"
+           target="_blank">
+          <span class="btn-icon">📍</span>
+          <span>네이버지도에서 위치 보기</span>
+        </a>
+      </div>
+
+      <div class="footer">
+        © <strong>게시대닷컴</strong> · 합법 지정게시대 전문 브랜드
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
 
 
