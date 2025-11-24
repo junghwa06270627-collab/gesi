@@ -7,129 +7,98 @@
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Noto Sans KR", system-ui, sans-serif;
-      background: #0b1c37;
-      color: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, "Noto Sans KR",
+                   system-ui, sans-serif;
+      min-height: 100vh;
       display: flex;
       justify-content: center;
-      padding: 16px;
+      align-items: stretch;
+      padding: 18px 14px;
+      background: radial-gradient(circle at top left, #1f6bff 0, #050816 45%, #02040a 100%);
+      color: #fff;
     }
-    .card {
+
+    .wrap {
       width: 100%;
-      max-width: 420px;
-      background: #061020;
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: 0 18px 40px rgba(0,0,0,0.4);
+      max-width: 440px;
     }
-    .card img {
+
+    .card {
+      background: rgba(5, 12, 30, 0.92);
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.65),
+        0 0 0 1px rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(10px);
+    }
+
+    /* 상단 이미지 */
+    .hero {
+      position: relative;
+      overflow: hidden;
+    }
+    .hero img {
       width: 100%;
       display: block;
+      transform: scale(1.02);
     }
+    .hero-badge {
+      position: absolute;
+      left: 16px;
+      bottom: 14px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 11px;
+      letter-spacing: 0.02em;
+      background: rgba(0, 0, 0, 0.55);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      backdrop-filter: blur(10px);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .hero-badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #37ff9a;
+      box-shadow: 0 0 12px rgba(55, 255, 154, 0.9);
+    }
+
+    /* 정보 영역 */
     .content {
-      padding: 18px 18px 10px;
+      padding: 18px 18px 4px;
     }
     .company {
       font-size: 18px;
-      font-weight: 700;
-      margin-bottom: 4px;
-      color: #4fc3ff;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #6fd3ff;
+      margin-bottom: 6px;
+    }
+    .title-ko {
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 2px;
     }
     .name-row {
-      font-size: 17px;
-      margin-bottom: 10px;
+      font-size: 16px;
+      margin-bottom: 14px;
     }
     .name-row strong {
-      font-size: 20px;
-      font-weight: 700;
+      font-size: 19px;
       margin-right: 4px;
     }
-    .sub {
-      font-size: 13px;
-      opacity: 0.9;
-      margin-bottom: 14px;
-      line-height: 1.4;
-    }
-    .btn-wrap {
-      padding: 0 16px 18px;
+    .tag-row {
       display: flex;
-      flex-direction: column;
-      gap: 10px;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 16px;
     }
-    .btn {
-      display: block;
-      width: 100%;
-      text-align: center;
-      text-decoration: none;
-      color: #fff;
-      padding: 12px 10px;
+    .tag {
       border-radius: 999px;
-      font-size: 15px;
-      font-weight: 600;
-      border: 1px solid rgba(255,255,255,0.1);
-      background: linear-gradient(135deg, #0084ff, #00c2ff);
-      box-shadow: 0 10px 20px rgba(0, 150, 255, 0.45);
-    }
-    .btn.secondary {
-      background: #0d223f;
-      box-shadow: none;
-    }
-    .btn span {
-      opacity: 0.9;
-    }
-    .footer {
-      text-align: center;
-      font-size: 11px;
-      color: rgba(255,255,255,0.6);
-      padding-bottom: 14px;
-    }
-  </style>
-</head>
-<body>
-  <div class="card">
+      border: 1px solid rgba
 
-    <!-- 같은 폴더에 있는 card.jpg 사용 -->
-  <img src="card.jpg" alt="명함 이미지" />
-
-
-    <div class="content">
-      <div class="company">게시대닷컴</div>
-      <div class="name-row">
-        <strong>이주원</strong> 대표
-      </div>
-      <p class="sub">
-        합법 지정게시대 전문 &nbsp;|&nbsp; 현수막 제작·게시 원스톱 서비스
-      </p>
-      <p class="sub">
-        주소 : 국세청로 4, 413-2호<br />
-        홈페이지 : http://gesidae.com
-      </p>
-    </div>
-
-    <div class="btn-wrap">
-      <a class="btn" href="tel:01092885003">
-        📞 전화하기  <span>(010-9288-5003)</span>
-      </a>
-      <a class="btn secondary" href="sms:01092885003">
-        💬 문자 보내기
-      </a>
-      <a class="btn secondary" href="mailto:gesidae5003@naver.com">
-        ✉️ 이메일 보내기
-      </a>
-      <a class="btn secondary" href="http://gesidae.com" target="_blank">
-        🌐 홈페이지 열기
-      </a>
-      <a class="btn secondary"
-         href="https://map.naver.com/v5/search/국세청로 4 413-2호"
-         target="_blank">
-        📍 위치 확인(네이버 지도)
-      </a>
-    </div>
-
-    <div class="footer">
-      © 게시대닷컴 · Mobile Business Card
-    </div>
-  </div>
-</body>
-</html>
 
